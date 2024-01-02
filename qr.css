@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fdfbfb;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fdfbfb,
+      #fdfbfb 10px,
+      #ebedee 10px,
+      #ebedee 20px
+    );
+  }
+
+  .dark-theme {
+    background: #333; /* Dark background */
+    color: #fff; /* Light text */
+    /* Add other styles for dark theme as needed */
+  }
+
+  .nice-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding inside the button */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block element */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+  }
+  
+  .nice-button:hover {
+    background-color: #45a049; /* Darker shade of green */
+  }
+  
+  .menu-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .menu-header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .menu-header h1 {
+    color: #333;
+    margin: 0;
+  }
+  .menu-section {
+    margin-bottom: 20px;
+  }
+  .menu-section-header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 -20px;
+    margin-bottom: 10px;
+  }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  .menu-title {
+    font-size: 18px;
+  }
+  .menu-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .menu-sub-item span {
+    margin-right: 10px; /* Adjust spacing as needed */
+    white-space: nowrap; /* Keeps the pricing on one line */
+  }
+  
+  .menu-sub-item {
+    display: flex; /* This will display the spans inline */
+    justify-content: flex-end;
+  }
+  
+  .menu-search {
+    width: 100%; /* Full width */
+    padding: 10px; /* Ample padding for larger touch area */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    border: 2px solid #333; /* Solid border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  #timer {
+    font-weight: bold;
+    color: red;
+  }
+
+  .button-default {
+    background-color: green;
+    /* Other styling as needed */
+  }
+  
+  .button-disabled {
+    background-color: red;
+    /* Other styling as needed */
+  }
+  
+  .button-disabled:hover {
+    background-color: darkred; /* Or any shade of red you prefer */
+    cursor: not-allowed; /* Changes cursor to indicate non-clickable */
+  }

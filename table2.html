@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charcoal Restaurant Menu</title>
+<link rel="stylesheet" href="qr.css">
+</head>
+<body>
+
+  <div class="menu-container">
+    <header class="menu-header">
+      <h1>Charcoal Restaurant Menu</h1>
+      <p>Gaindakot-2, Bhrikuti Chowk, Nawalpur</p>
+      <p>9749358429/9821131970</p>
+    </header>
+
+    <button id="callService" class="nice-button button-default">Call for Service</button>
+    <span id="timer" style="margin-left: 10px;"></span>
+
+  
+    <input type="text" id="menuSearch" onkeyup="searchMenu()" placeholder="Search menu items..." class="menu-search">
+
+    <!-- Chicken Items -->
+    <section class="menu-section">
+      <h2 class="menu-section-header">Chicken Items</h2>
+      <div class="menu-item">
+        <span class="menu-title">Chicken Sekuwa</span>
+        <span class="menu-price">Rs.250</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-title">Chicken Sandheko</span>
+        <span class="menu-price">Rs.250</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-title">Chicken Sausage</span>
+        <span class="menu-price">Rs.250</span>
+      </div>
+    <div class="menu-item">
+      <span class="menu-title">Chicken Chilly Boneless</span>
+      <span class="menu-price">Rs.280</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Chicken Burger Crunchy</span>
+      <span class="menu-price">Rs.280</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Chicken Roast</span>
+      <span class="menu-price">Rs.290</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Chicken Khaja Set</span>
+      <span class="menu-price">Rs.300</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Crispy Charcoal Chicken</span>
+      <span class="menu-price">Rs.350</span>
+    </div>
+  </section>
+
+  <!-- Pork Items -->
+  <section class="menu-section">
+    <h2 class="menu-section-header">Pork Items</h2>
+    <div class="menu-item">
+      <span class="menu-title">Pork Sekuwa</span>
+      <span class="menu-price">Rs.200</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Pork Sandheko</span>
+      <span class="menu-price">Rs.250</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Pork Chilly</span>
+      <span class="menu-price">Rs.280</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Pork Deep Fry</span>
+      <span class="menu-price">Rs.280</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Pork Khaja Set</span>
+      <span class="menu-price">Rs.300</span>
+    </div>
+  </section>
+
+  <!-- Buff Items -->
+  <section class="menu-section">
+    <h2 class="menu-section-header">Buff Items</h2>
+    <div class="menu-item">
+      <span class="menu-title">Buff Sukuti</span>
+      <span class="menu-price">Rs.250</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Buff Sausage</span>
+      <span class="menu-price">Rs.250</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Buff Jibro Deep Fry</span>
+      <span class="menu-price">Rs.250</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Buff Sukuti Khaja Set</span>
+      <span class="menu-price">Rs.280</span>
+    </div>
+  </section>
+
+  <!-- Snacks -->
+  <section class="menu-section">
+    <h2 class="menu-section-header">Snacks</h2>
+    <div class="menu-item">
+      <span class="menu-title">Chau Chau Sandheko</span>
+      <span class="menu-price">Rs.80</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Beans Sprout Sandheko</span>
+      <span class="menu-price">Rs.120</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Bhatmas Sandheko</span>
+      <span class="menu-price">Rs.100</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Badam Sandheko</span>
+      <span class="menu-price">Rs.130</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">French Fries</span>
+      <span class="menu-price">Rs.150</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Fry Potato Wedges (Timur Flavour)</span>
+      <span class="menu-price">Rs.150</span>
+    </div>
+  </section>
+  
+  <!-- Mo:Mo -->
+  <section class="menu-section">
+    <h2 class="menu-section-header">Mo:Mo</h2>
+    
+    <div class="menu-item">
+      <span class="menu-title">Buff</span>
+      <div class="menu-sub-item">
+        <span class="menu-price">Steam: Rs.120</span>
+        <span class="menu-price">Jhol: Rs.160</span>
+        <span class="menu-price">Fry: Rs.180</span>
+      </div>
+    </div>
+    
+    <div class="menu-item">
+      <span class="menu-title">Chicken</span>
+      <div class="menu-sub-item">
+        <span class="menu-price">Steam: Rs.140</span>
+        <span class="menu-price">Jhol: Rs.170</span>
+        <span class="menu-price">Fry: Rs.200</span>
+      </div>
+    </div>
+    
+  </section>
+  
+
+  <!-- Chowmein -->
+  <section class="menu-section">
+    <h2 class="menu-section-header">Chowmein</h2>
+    <div class="menu-item">
+      <span class="menu-title">Veg</span>
+      <span class="menu-price">Rs.70/Rs.120</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Buff</span>
+      <span class="menu-price">Rs.100/Rs.180</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Chicken</span>
+      <span class="menu-price">Rs.110/Rs.200</span>
+    </div>
+    <div class="menu-item">
+      <span class="menu-title">Pork</span>
+      <span class="menu-price">Rs.110/Rs.200</span>
+    </div>
+  </section>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <script>
+    var socket = io();
+    var callServiceButton = document.getElementById('callService');
+    var timerElement = document.getElementById('timer');
+  
+    callServiceButton.addEventListener('click', function() {
+      // Emit 'callService' event
+      socket.emit('callService', { tableNumber: 'Table 1' }); // or 'Table 2' for table2.html
+  
+      // Change button appearance to disabled state
+      callServiceButton.classList.remove('button-default');
+      callServiceButton.classList.add('button-disabled');
+      callServiceButton.disabled = true;
+  
+      // Start a 15-second timer
+      var timeLeft = 15;
+      timerElement.textContent = timeLeft + 's';
+  
+      var countdown = setInterval(function() {
+        timeLeft--;
+        timerElement.textContent = timeLeft + 's';
+  
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          timerElement.textContent = '';
+          callServiceButton.disabled = false;
+          // Inside the click event listener
+          callServiceButton.classList.add('button-disabled');
+              // ...
+            // Resetting the button after the timer
+          callServiceButton.classList.remove('button-disabled');
+          callServiceButton.classList.add('button-default');
+
+        }
+      }, 1000);
+    });
+  </script>
+  
+  
+  <script src="script.js"></script>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <h1>Front Desk Dashboard</h1>
+
+  <button id="muteButton" onclick="toggleMute()">Unmute Notifications</button>
+
+  <!-- Table for Logging -->
+  <table id="callLog">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>IP Address</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody id="logBody">
+      <!-- Log entries will be added here -->
+    </tbody>
+  </table>
+
+  <div id="notifications"></div>
+  <audio id="notificationSound"></audio> <!-- Removed the src attribute -->
+
+  <!-- Load Socket.IO client -->
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script>
+    var socket = io();
+    var notificationSound = document.getElementById('notificationSound');
+    var logBody = document.getElementById('logBody');
+    var isMuted = true;
+  
+    function toggleMute() {
+      isMuted = !isMuted;
+      var muteButton = document.getElementById('muteButton');
+      muteButton.textContent = isMuted ? 'Unmute Notifications' : 'Mute Notifications';
+    }
+  
+    socket.on('serviceCalled', function(data) {
+      // Play the notification sound only if not muted
+      if (!isMuted) {
+        if (data.tableNumber === 'Table 1') {
+          notificationSound.src = 'table1.mp3'; // Ensure this path is correct
+        } else if (data.tableNumber === 'Table 2') {
+          notificationSound.src = 'table2.mp3'; // Ensure this path is correct
+        }
+        // ... handle other tables as needed
+        notificationSound.play();
+      }
+  
+      // Log the call in the table
+      var newRow = logBody.insertRow(0);
+      var fromCell = newRow.insertCell(0);
+      var ipCell = newRow.insertCell(1);
+      var timeCell = newRow.insertCell(2);
+  
+      fromCell.textContent = data.tableNumber;
+      ipCell.textContent = data.ipAddress; // Assuming you are sending IP address from server
+      timeCell.textContent = new Date().toLocaleString();
+    });
+  </script>
+  
+  
+  <!-- Additional JavaScript file, if needed -->
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
